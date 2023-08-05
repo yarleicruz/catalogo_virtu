@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Catalogo Virtual</title>
+        <meta chorset="utf-8" />
+    </head>
+
+    <body>
+        <div id="produtos">
+
+        </div><--produtos-->
+
+        <div id="carrinho">
+
+        </div><--carrinho-->
+
+        <script>
+            const items = [
+                {
+                    id:0,
+                    nome: 'camisa ceara 23/24',
+                    img: 'images.jpg',
+                    quantidade: 0,
+                },
+                {
+                    id:1,
+                    nome: 'camisa arsenal 23/24',
+                    img: 'images.jpg',
+                    quantidade: 0,
+                },
+                {
+                    id:2,
+                    nome: 'camisa flamengo 23/24',
+                    img: 'images.jpg',
+                    quantidade: 0,
+                },
+            ]
+
+            inicializarloja = () => {
+            var containerProdutos = document.getElementById('produtos');
+               items.map((val)=>{
+                   containerProdutos.innerHTML += `
+                   
+                   <div class='produto'>
+                    <img src='`+val.img+`' />
+                    <p>`+val.nome+`</p>
+                    <a key='`+val.id+`'href=''>Adicionar ao carrinho!</a>
+                
+                    </div>
+                `;
+               })
+            }
+            inicializarloja();
+        
+        </script>
+
+    </body>
+
+</html>
